@@ -1,0 +1,61 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DWH",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Mode Group",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Quote#",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Customer Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Mode Group Brenntag",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Region of Origin",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Destination",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State of Origin",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State of Destination",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Service",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "QuotesManualesPlantilla"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

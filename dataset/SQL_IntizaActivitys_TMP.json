@@ -1,0 +1,17 @@
+{
+	"name": "SQL_IntizaActivitys_TMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "Intiza",
+			"table": "Activity_TMP"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

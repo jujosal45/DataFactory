@@ -1,0 +1,20 @@
+{
+	"name": "Customer_TMP_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerVM",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Customers_Reports_TMP"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,91 @@
+{
+	"name": "SQL_IntizaPayment_TMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Customer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Cod# Cliente",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Amount Payment",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Invoice",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Invoice Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Comments",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Issue date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Detail bol",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Due date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Amount Invoice",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Pending",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "BS - Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Comments1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Fecha estado factura",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Tipo Disputa",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "Intiza",
+			"table": "Payments_TMP"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

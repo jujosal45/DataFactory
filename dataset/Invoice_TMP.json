@@ -1,0 +1,16 @@
+{
+	"name": "Invoice_TMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "[dbo].[Invoice_Reports_TMP]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,134 @@
+{
+	"name": "SQL_IntizaCustomer_TMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Customer",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Invoices",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Amount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Due amount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Not due amount",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Cod# Cliente",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contacto AR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone Number AR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email AR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Teléfono 2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Fax",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Follow-up E-mail",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Categoría",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vendedor",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email comercial",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Inside Sales",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contacto Emergencia",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email emergencia",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Notes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AR Representante",
+				"type": "nvarchar"
+			},
+			{
+				"name": "País",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Condición",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AR Skholl",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Segments",
+				"type": "text"
+			}
+		],
+		"typeProperties": {
+			"schema": "Intiza",
+			"table": "Customers_TMP"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

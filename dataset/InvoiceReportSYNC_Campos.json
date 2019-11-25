@@ -1,0 +1,161 @@
+{
+	"name": "InvoiceReportSYNC_Campos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "Invoice#",
+				"type": "String"
+			},
+			{
+				"name": "InvoiceDate",
+				"type": "Date"
+			},
+			{
+				"name": "DueDate",
+				"type": "String"
+			},
+			{
+				"name": "Aging",
+				"type": "String"
+			},
+			{
+				"name": "BOL#",
+				"type": "String"
+			},
+			{
+				"name": "BOLDate",
+				"type": "String"
+			},
+			{
+				"name": "Mode",
+				"type": "String"
+			},
+			{
+				"name": "CustomerCode",
+				"type": "String"
+			},
+			{
+				"name": "Customer",
+				"type": "String"
+			},
+			{
+				"name": "CarrierName",
+				"type": "String"
+			},
+			{
+				"name": "PRO#",
+				"type": "String"
+			},
+			{
+				"name": "ShipperCity",
+				"type": "String"
+			},
+			{
+				"name": "ShipperCountry",
+				"type": "String"
+			},
+			{
+				"name": "ConsigneeCity",
+				"type": "String"
+			},
+			{
+				"name": "ConsigneeCountry",
+				"type": "String"
+			},
+			{
+				"name": "Office",
+				"type": "String"
+			},
+			{
+				"name": "ShipperRef#",
+				"type": "String"
+			},
+			{
+				"name": "ConsigneeRef#",
+				"type": "String"
+			},
+			{
+				"name": "ThirdPartyRef",
+				"type": "String"
+			},
+			{
+				"name": "EstCost",
+				"type": "String"
+			},
+			{
+				"name": "ActCost",
+				"type": "Decimal"
+			},
+			{
+				"name": "Invoice",
+				"type": "Decimal"
+			},
+			{
+				"name": "Paid",
+				"type": "String"
+			},
+			{
+				"name": "EstCost2",
+				"type": "String"
+			},
+			{
+				"name": "ActCost2",
+				"type": "String"
+			},
+			{
+				"name": "CostClosed",
+				"type": "String"
+			},
+			{
+				"name": "Ready",
+				"type": "String"
+			},
+			{
+				"name": "Sent",
+				"type": "String"
+			},
+			{
+				"name": "VendorCode",
+				"type": "String"
+			},
+			{
+				"name": "VendorName",
+				"type": "String"
+			},
+			{
+				"name": "InvoiceRemarks",
+				"type": "String"
+			},
+			{
+				"name": "InvoiceRemarksInternal",
+				"type": "String"
+			},
+			{
+				"name": "Customer Id",
+				"type": "String"
+			},
+			{
+				"name": "Shipper Id",
+				"type": "String"
+			},
+			{
+				"name": "Vendor Id",
+				"type": "String"
+			},
+			{
+				"name": "Removed",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Invoice_Reports]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

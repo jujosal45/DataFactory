@@ -1,0 +1,133 @@
+{
+	"name": "SQL_Quotes_Reports_TMP_Campos",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Quote#",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer Quote#",
+				"type": "varchar"
+			},
+			{
+				"name": "Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Origin",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "Destination",
+				"type": "varchar"
+			},
+			{
+				"name": "State2",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode2",
+				"type": "varchar"
+			},
+			{
+				"name": "Distance",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor",
+				"type": "varchar"
+			},
+			{
+				"name": "Carrier",
+				"type": "varchar"
+			},
+			{
+				"name": "Service Level",
+				"type": "varchar"
+			},
+			{
+				"name": "Transit",
+				"type": "varchar"
+			},
+			{
+				"name": "Pieces",
+				"type": "varchar"
+			},
+			{
+				"name": "Weight",
+				"type": "varchar"
+			},
+			{
+				"name": "Class",
+				"type": "varchar"
+			},
+			{
+				"name": "Total",
+				"type": "varchar"
+			},
+			{
+				"name": "Quote#2",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer",
+				"type": "varchar"
+			},
+			{
+				"name": "From Applet",
+				"type": "varchar"
+			},
+			{
+				"name": "Insurance",
+				"type": "varchar"
+			},
+			{
+				"name": "Booked",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL#",
+				"type": "varchar"
+			},
+			{
+				"name": "Last Update",
+				"type": "varchar"
+			},
+			{
+				"name": "Date2",
+				"type": "varchar"
+			},
+			{
+				"name": "Time",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer Id",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor Id",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Quotes_Reports_TMP]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

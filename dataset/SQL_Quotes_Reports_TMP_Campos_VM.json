@@ -1,0 +1,20 @@
+{
+	"name": "SQL_Quotes_Reports_TMP_Campos_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerVM",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Quotes_Reports_TMP"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

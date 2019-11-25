@@ -1,0 +1,316 @@
+{
+	"name": "ShipmentReportSOURCEF",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FtpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "FileShare",
+		"structure": [
+			{
+				"name": "BOL#",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Mode",
+				"type": "String"
+			},
+			{
+				"name": "Controlled by",
+				"type": "String"
+			},
+			{
+				"name": "SalesPeople",
+				"type": "String"
+			},
+			{
+				"name": "Shipper",
+				"type": "String"
+			},
+			{
+				"name": "Address",
+				"type": "String"
+			},
+			{
+				"name": "City",
+				"type": "String"
+			},
+			{
+				"name": "State",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Zipcode",
+				"type": "String"
+			},
+			{
+				"name": "Email",
+				"type": "String"
+			},
+			{
+				"name": "Shipper Ref#",
+				"type": "String"
+			},
+			{
+				"name": "Consignee",
+				"type": "String"
+			},
+			{
+				"name": "Address2",
+				"type": "String"
+			},
+			{
+				"name": "City2",
+				"type": "String"
+			},
+			{
+				"name": "State2",
+				"type": "String"
+			},
+			{
+				"name": "Country2",
+				"type": "String"
+			},
+			{
+				"name": "Zipcode2",
+				"type": "String"
+			},
+			{
+				"name": "Lanes",
+				"type": "String"
+			},
+			{
+				"name": "Distance",
+				"type": "String"
+			},
+			{
+				"name": "Email2",
+				"type": "String"
+			},
+			{
+				"name": "Consignee Ref#",
+				"type": "String"
+			},
+			{
+				"name": "Customer Code",
+				"type": "String"
+			},
+			{
+				"name": "Customer Name",
+				"type": "String"
+			},
+			{
+				"name": "Address3",
+				"type": "String"
+			},
+			{
+				"name": "City3",
+				"type": "String"
+			},
+			{
+				"name": "State3",
+				"type": "String"
+			},
+			{
+				"name": "Country3",
+				"type": "String"
+			},
+			{
+				"name": "Zipcode3",
+				"type": "String"
+			},
+			{
+				"name": "Email3",
+				"type": "String"
+			},
+			{
+				"name": "Customer Ref#",
+				"type": "String"
+			},
+			{
+				"name": "Total Weight",
+				"type": "String"
+			},
+			{
+				"name": "Unit",
+				"type": "String"
+			},
+			{
+				"name": "Class",
+				"type": "String"
+			},
+			{
+				"name": "Pieces",
+				"type": "String"
+			},
+			{
+				"name": "Hazmat",
+				"type": "String"
+			},
+			{
+				"name": "Commodities",
+				"type": "String"
+			},
+			{
+				"name": "CFT",
+				"type": "String"
+			},
+			{
+				"name": "Density",
+				"type": "String"
+			},
+			{
+				"name": "Estimated PU Date",
+				"type": "String"
+			},
+			{
+				"name": "Month_Number",
+				"type": "String"
+			},
+			{
+				"name": "Month",
+				"type": "String"
+			},
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Weeknum",
+				"type": "String"
+			},
+			{
+				"name": "Confirmed PU Date",
+				"type": "String"
+			},
+			{
+				"name": "Due Date",
+				"type": "String"
+			},
+			{
+				"name": "Confirmed DLV Date",
+				"type": "String"
+			},
+			{
+				"name": "Days Overdue",
+				"type": "String"
+			},
+			{
+				"name": "Current Status",
+				"type": "String"
+			},
+			{
+				"name": "Vendor",
+				"type": "String"
+			},
+			{
+				"name": "Carrier",
+				"type": "String"
+			},
+			{
+				"name": "Service",
+				"type": "String"
+			},
+			{
+				"name": "Transit",
+				"type": "String"
+			},
+			{
+				"name": "Carrier SCAC",
+				"type": "String"
+			},
+			{
+				"name": "Pickup#",
+				"type": "String"
+			},
+			{
+				"name": "PRO#",
+				"type": "String"
+			},
+			{
+				"name": "Accessorials",
+				"type": "String"
+			},
+			{
+				"name": "Insurance",
+				"type": "String"
+			},
+			{
+				"name": "Booking Est. Cost",
+				"type": "String"
+			},
+			{
+				"name": "Booking Act. Costs",
+				"type": "String"
+			},
+			{
+				"name": "Invoice Costs",
+				"type": "String"
+			},
+			{
+				"name": "BillTo Amount",
+				"type": "String"
+			},
+			{
+				"name": "Profit USD",
+				"type": "String"
+			},
+			{
+				"name": "Profit",
+				"type": "String"
+			},
+			{
+				"name": "GP",
+				"type": "String"
+			},
+			{
+				"name": "Last Update",
+				"type": "String"
+			},
+			{
+				"name": "Date2",
+				"type": "String"
+			},
+			{
+				"name": "Time",
+				"type": "String"
+			},
+			{
+				"name": "BOL Deleted",
+				"type": "String"
+			},
+			{
+				"name": "Notes",
+				"type": "String"
+			},
+			{
+				"name": "Notes -Internal-",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"quoteChar": "\"",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 2,
+				"firstRowAsHeader": false
+			},
+			"fileName": "ShipmentReport_*.csv",
+			"folderPath": ""
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "AzureBlob_backupfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "bloblfs",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "backupfiles"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

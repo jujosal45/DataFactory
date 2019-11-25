@@ -1,0 +1,20 @@
+{
+	"name": "APItest_TMP_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerVM",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "TestApi"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

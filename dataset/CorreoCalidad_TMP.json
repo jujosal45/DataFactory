@@ -1,0 +1,16 @@
+{
+	"name": "CorreoCalidad_TMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "[dbo].[MTSummary_Inbound_TMP]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "IntizaTasks",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "FtpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "FileShare",
+		"typeProperties": {
+			"fileName": "LFS_Tasks.csv",
+			"folderPath": "."
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

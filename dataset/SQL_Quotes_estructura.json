@@ -1,0 +1,131 @@
+{
+	"name": "SQL_Quotes_estructura",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Quote#",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer Quote#",
+				"type": "varchar"
+			},
+			{
+				"name": "Date",
+				"type": "date"
+			},
+			{
+				"name": "Origin",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "Destination",
+				"type": "varchar"
+			},
+			{
+				"name": "State2",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode2",
+				"type": "varchar"
+			},
+			{
+				"name": "Distance",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor",
+				"type": "varchar"
+			},
+			{
+				"name": "Carrier",
+				"type": "varchar"
+			},
+			{
+				"name": "Service Level",
+				"type": "varchar"
+			},
+			{
+				"name": "Transit",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Pieces",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Weight",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 4
+			},
+			{
+				"name": "Class",
+				"type": "varchar"
+			},
+			{
+				"name": "Total",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 4
+			},
+			{
+				"name": "Quote#2",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer",
+				"type": "varchar"
+			},
+			{
+				"name": "From Applet",
+				"type": "varchar"
+			},
+			{
+				"name": "Insurance",
+				"type": "varchar"
+			},
+			{
+				"name": "Booked",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL#",
+				"type": "varchar"
+			},
+			{
+				"name": "Last Update",
+				"type": "varchar"
+			},
+			{
+				"name": "Date2",
+				"type": "date"
+			},
+			{
+				"name": "Time",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Quotes_Reports_estructura]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

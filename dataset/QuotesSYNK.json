@@ -1,0 +1,125 @@
+{
+	"name": "QuotesSYNK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "Quote#",
+				"type": "String"
+			},
+			{
+				"name": "Customer Quote#",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Origin",
+				"type": "String"
+			},
+			{
+				"name": "State",
+				"type": "String"
+			},
+			{
+				"name": "Zipcode",
+				"type": "String"
+			},
+			{
+				"name": "Destination",
+				"type": "String"
+			},
+			{
+				"name": "State2",
+				"type": "String"
+			},
+			{
+				"name": "Zipcode2",
+				"type": "String"
+			},
+			{
+				"name": "Distance",
+				"type": "String"
+			},
+			{
+				"name": "Vendor",
+				"type": "String"
+			},
+			{
+				"name": "Carrier",
+				"type": "String"
+			},
+			{
+				"name": "Service Level",
+				"type": "String"
+			},
+			{
+				"name": "Transit",
+				"type": "String"
+			},
+			{
+				"name": "Pieces",
+				"type": "String"
+			},
+			{
+				"name": "Weight",
+				"type": "String"
+			},
+			{
+				"name": "Class",
+				"type": "String"
+			},
+			{
+				"name": "Total",
+				"type": "String"
+			},
+			{
+				"name": "Quote#2",
+				"type": "String"
+			},
+			{
+				"name": "Customer",
+				"type": "String"
+			},
+			{
+				"name": "From Applet",
+				"type": "String"
+			},
+			{
+				"name": "Insurance",
+				"type": "String"
+			},
+			{
+				"name": "Booked",
+				"type": "String"
+			},
+			{
+				"name": "BOL#",
+				"type": "String"
+			},
+			{
+				"name": "Last Update",
+				"type": "String"
+			},
+			{
+				"name": "Date2",
+				"type": "String"
+			},
+			{
+				"name": "Time",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Quotes_Reports]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

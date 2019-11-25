@@ -1,0 +1,67 @@
+{
+	"name": "APItest_TMP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Active",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Fax",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Contact",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Email",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Motor Carrier#",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Use API",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Name2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Check",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FechaCarga",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[TestApi]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,173 @@
+{
+	"name": "Invoice_TMP_Campos_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerVM",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Invoice#",
+				"type": "varchar"
+			},
+			{
+				"name": "InvoiceDate",
+				"type": "varchar"
+			},
+			{
+				"name": "DueDate",
+				"type": "varchar"
+			},
+			{
+				"name": "Aging",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL#",
+				"type": "varchar"
+			},
+			{
+				"name": "BOLDate",
+				"type": "varchar"
+			},
+			{
+				"name": "Mode",
+				"type": "varchar"
+			},
+			{
+				"name": "CustomerCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer",
+				"type": "varchar"
+			},
+			{
+				"name": "CarrierName",
+				"type": "varchar"
+			},
+			{
+				"name": "PRO#",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipperCity",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipperCountry",
+				"type": "varchar"
+			},
+			{
+				"name": "ConsigneeCity",
+				"type": "varchar"
+			},
+			{
+				"name": "ConsigneeCountry",
+				"type": "varchar"
+			},
+			{
+				"name": "Office",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipperRef#",
+				"type": "varchar"
+			},
+			{
+				"name": "ConsigneeRef#",
+				"type": "varchar"
+			},
+			{
+				"name": "ThirdPartyRef",
+				"type": "varchar"
+			},
+			{
+				"name": "EstCost",
+				"type": "varchar"
+			},
+			{
+				"name": "ActCost",
+				"type": "varchar"
+			},
+			{
+				"name": "Invoice",
+				"type": "varchar"
+			},
+			{
+				"name": "Paid",
+				"type": "varchar"
+			},
+			{
+				"name": "EstCost2",
+				"type": "varchar"
+			},
+			{
+				"name": "ActCost2",
+				"type": "varchar"
+			},
+			{
+				"name": "CostClosed",
+				"type": "varchar"
+			},
+			{
+				"name": "Ready",
+				"type": "varchar"
+			},
+			{
+				"name": "Sent",
+				"type": "varchar"
+			},
+			{
+				"name": "VendorCode",
+				"type": "varchar"
+			},
+			{
+				"name": "VendorName",
+				"type": "varchar"
+			},
+			{
+				"name": "InvoiceRemarks",
+				"type": "text"
+			},
+			{
+				"name": "InvoiceRemarksInternal",
+				"type": "text"
+			},
+			{
+				"name": "Customer id",
+				"type": "varchar"
+			},
+			{
+				"name": "Shipper id",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor id",
+				"type": "varchar"
+			},
+			{
+				"name": "Removed",
+				"type": "varchar"
+			},
+			{
+				"name": "OpenState",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SalesPeople_Hist",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Invoice_Reports_TMP"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

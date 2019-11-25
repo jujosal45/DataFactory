@@ -1,0 +1,977 @@
+{
+	"name": "InvoiceReportsCampos",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_Invoices_TMP",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Copy Invoicefile",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 5,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FtpReadSettings",
+							"recursive": true,
+							"wildcardFileName": "Invoices*.csv",
+							"useBinaryTransfer": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 1
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table Invoice_Reports_TMP"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 1
+								},
+								"sink": {
+									"name": "Invoice#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 2
+								},
+								"sink": {
+									"name": "InvoiceDate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 3
+								},
+								"sink": {
+									"name": "DueDate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 4
+								},
+								"sink": {
+									"name": "Aging",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 5
+								},
+								"sink": {
+									"name": "BOL#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 6
+								},
+								"sink": {
+									"name": "BOLDate",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 7
+								},
+								"sink": {
+									"name": "Mode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 8
+								},
+								"sink": {
+									"name": "CustomerCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 9
+								},
+								"sink": {
+									"name": "Customer",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 10
+								},
+								"sink": {
+									"name": "CarrierName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 11
+								},
+								"sink": {
+									"name": "PRO#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 12
+								},
+								"sink": {
+									"name": "ShipperCity",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 13
+								},
+								"sink": {
+									"name": "ShipperCountry",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 14
+								},
+								"sink": {
+									"name": "ConsigneeCity",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 15
+								},
+								"sink": {
+									"name": "ConsigneeCountry",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 16
+								},
+								"sink": {
+									"name": "Office",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 17
+								},
+								"sink": {
+									"name": "ShipperRef#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 18
+								},
+								"sink": {
+									"name": "ConsigneeRef#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 19
+								},
+								"sink": {
+									"name": "ThirdPartyRef",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 20
+								},
+								"sink": {
+									"name": "EstCost",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 21
+								},
+								"sink": {
+									"name": "ActCost",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 22
+								},
+								"sink": {
+									"name": "Invoice",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 23
+								},
+								"sink": {
+									"name": "Paid",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 24
+								},
+								"sink": {
+									"name": "EstCost2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 25
+								},
+								"sink": {
+									"name": "ActCost2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 26
+								},
+								"sink": {
+									"name": "CostClosed",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 27
+								},
+								"sink": {
+									"name": "Ready",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 28
+								},
+								"sink": {
+									"name": "Sent",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 29
+								},
+								"sink": {
+									"name": "VendorCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 30
+								},
+								"sink": {
+									"name": "VendorName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 31
+								},
+								"sink": {
+									"name": "InvoiceRemarks",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 32
+								},
+								"sink": {
+									"name": "InvoiceRemarksInternal",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 33
+								},
+								"sink": {
+									"name": "Customer id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 34
+								},
+								"sink": {
+									"name": "Shipper id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 35
+								},
+								"sink": {
+									"name": "Vendor id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"type": "String",
+									"ordinal": 36
+								},
+								"sink": {
+									"name": "Removed",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "InvoiceReportSOURCE",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Invoice_TMP_Campos",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy_Invoices",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Delete_invalid_invoices",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 5,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "delete h from invoice_reports_tmp t inner join invoice_reports h\non t.invoice#=h.invoice#"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"redirectIncompatibleRowSettings": {
+						"linkedServiceName": {
+							"referenceName": "bloblfs",
+							"type": "LinkedServiceReference"
+						},
+						"path": "logs"
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Invoice#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Invoice#"
+								}
+							},
+							{
+								"source": {
+									"name": "InvoiceDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "InvoiceDate"
+								}
+							},
+							{
+								"source": {
+									"name": "DueDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DueDate"
+								}
+							},
+							{
+								"source": {
+									"name": "Aging",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Aging"
+								}
+							},
+							{
+								"source": {
+									"name": "BOL#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BOL#"
+								}
+							},
+							{
+								"source": {
+									"name": "BOLDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BOLDate"
+								}
+							},
+							{
+								"source": {
+									"name": "Mode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Mode"
+								}
+							},
+							{
+								"source": {
+									"name": "CustomerCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CustomerCode"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer"
+								}
+							},
+							{
+								"source": {
+									"name": "CarrierName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CarrierName"
+								}
+							},
+							{
+								"source": {
+									"name": "PRO#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PRO#"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipperCity",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShipperCity"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipperCountry",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShipperCountry"
+								}
+							},
+							{
+								"source": {
+									"name": "ConsigneeCity",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ConsigneeCity"
+								}
+							},
+							{
+								"source": {
+									"name": "ConsigneeCountry",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ConsigneeCountry"
+								}
+							},
+							{
+								"source": {
+									"name": "Office",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Office"
+								}
+							},
+							{
+								"source": {
+									"name": "ShipperRef#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShipperRef#"
+								}
+							},
+							{
+								"source": {
+									"name": "ConsigneeRef#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ConsigneeRef#"
+								}
+							},
+							{
+								"source": {
+									"name": "ThirdPartyRef",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ThirdPartyRef"
+								}
+							},
+							{
+								"source": {
+									"name": "EstCost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EstCost"
+								}
+							},
+							{
+								"source": {
+									"name": "ActCost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ActCost"
+								}
+							},
+							{
+								"source": {
+									"name": "Invoice",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Invoice"
+								}
+							},
+							{
+								"source": {
+									"name": "Paid",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Paid"
+								}
+							},
+							{
+								"source": {
+									"name": "EstCost2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EstCost2"
+								}
+							},
+							{
+								"source": {
+									"name": "ActCost2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ActCost2"
+								}
+							},
+							{
+								"source": {
+									"name": "CostClosed",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CostClosed"
+								}
+							},
+							{
+								"source": {
+									"name": "Ready",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Ready"
+								}
+							},
+							{
+								"source": {
+									"name": "Sent",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Sent"
+								}
+							},
+							{
+								"source": {
+									"name": "VendorCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VendorCode"
+								}
+							},
+							{
+								"source": {
+									"name": "VendorName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "VendorName"
+								}
+							},
+							{
+								"source": {
+									"name": "InvoiceRemarks",
+									"type": "String"
+								},
+								"sink": {
+									"name": "InvoiceRemarks"
+								}
+							},
+							{
+								"source": {
+									"name": "InvoiceRemarksInternal",
+									"type": "String"
+								},
+								"sink": {
+									"name": "InvoiceRemarksInternal"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer Id"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipper id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Shipper Id"
+								}
+							},
+							{
+								"source": {
+									"name": "Vendor id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Vendor Id"
+								}
+							},
+							{
+								"source": {
+									"name": "Removed",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Removed"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Invoice_TMP_Campos",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "InvoiceReportSYNC_Campos",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Delete_invalid_invoices",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy_Invoices_TMP",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 5,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[DeleteInvalidInvoices]"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Copy Invoicefile",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 5,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "FileSystemSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Invoicefile",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlob_backupfiles",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Delete Invoice files",
+				"type": "Delete",
+				"dependsOn": [
+					{
+						"activity": "Copy_Invoices",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 5,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "Invoicefile",
+						"type": "DatasetReference"
+					},
+					"enableLogging": false,
+					"recursive": true
+				}
+			},
+			{
+				"name": "WebActivity1",
+				"type": "WebActivity",
+				"dependsOn": [
+					{
+						"activity": "SqlServerStoredProcedureActualizarBilltoamont",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-61.eastus2.logic.azure.com:443/workflows/17d75181fc2e46af9af5cd61cde610da/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=aSuWAoNUcUYvUfojESDckXidpL1kn7ROXHoeZIlXLoQ",
+					"method": "POST"
+				}
+			},
+			{
+				"name": "Actualizar Vendedor Historico",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Delete Invoice files",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 5,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "dbo.Sp_InserUpdate_Historico_SalesPeople"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "SqlServerStoredProcedureActualizarBilltoamont",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Actualizar Vendedor Historico",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 5,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "dbo.Sp_ActualizarBilltoAmount_Shipment"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
