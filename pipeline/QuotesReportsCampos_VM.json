@@ -82,7 +82,7 @@
 							"referenceName": "bloblfs",
 							"type": "LinkedServiceReference"
 						},
-						"path": "backupfiles"
+						"path": "logs"
 					},
 					"translator": {
 						"type": "TabularTranslator",
