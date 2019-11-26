@@ -1,6 +1,7 @@
 {
 	"name": "AzureBlob_backupfiles",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "bloblfs",
 			"type": "LinkedServiceReference"

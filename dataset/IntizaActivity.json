@@ -1,6 +1,7 @@
 {
 	"name": "IntizaActivity",
 	"properties": {
+		"description": "wm",
 		"linkedServiceName": {
 			"referenceName": "FtpServer1",
 			"type": "LinkedServiceReference"
