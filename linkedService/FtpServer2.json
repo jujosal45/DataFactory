@@ -2,6 +2,7 @@
 	"name": "FtpServer2",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"description": "j",
 		"annotations": [],
 		"type": "FtpServer",
 		"typeProperties": {
@@ -11,7 +12,7 @@
 			"enableServerCertificateValidation": false,
 			"authenticationType": "Basic",
 			"userName": "LFSReports",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1lCSS1MRlNfYzRkYzRlZmItMDgzMS00OTI5LThiNDctMTlmMmU5YzMwOTIwIg0KfQ=="
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkxGU0RBVEFGQUNUT1JZXzU2ZDRkZGEzLTUwYzgtNDhkNC1iMGFkLTBkM2Y2ZjY0MjBlZiINCn0="
 		}
 	}
 }
