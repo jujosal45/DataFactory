@@ -1,6 +1,7 @@
 {
 	"name": "Vendor_TMP_VM",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "SqlServerVM",
 			"type": "LinkedServiceReference"

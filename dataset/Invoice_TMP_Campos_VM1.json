@@ -1,6 +1,7 @@
 {
 	"name": "Invoice_TMP_Campos_VM1",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "SqlServerVM",
 			"type": "LinkedServiceReference"

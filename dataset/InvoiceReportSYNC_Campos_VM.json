@@ -1,6 +1,7 @@
 {
 	"name": "InvoiceReportSYNC_Campos_VM",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "SqlServerVM",
 			"type": "LinkedServiceReference"

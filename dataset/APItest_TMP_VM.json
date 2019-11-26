@@ -1,6 +1,7 @@
 {
 	"name": "APItest_TMP_VM",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "SqlServerVM",
 			"type": "LinkedServiceReference"

@@ -1,6 +1,7 @@
 {
 	"name": "SQL_Quotes_Reports_TMP_Campos_VM",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "SqlServerVM",
 			"type": "LinkedServiceReference"
