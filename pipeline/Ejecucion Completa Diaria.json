@@ -96,26 +96,6 @@
 				}
 			},
 			{
-				"name": "Modelo Tabular",
-				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "Sp_Actualizar_OfficeAssigned",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "AnalysisServices",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true
-				}
-			},
-			{
 				"name": "Sp_Actualizar_OfficeAssigned",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
