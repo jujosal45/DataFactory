@@ -1,6 +1,7 @@
 {
 	"name": "QuotesReports",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Quotesfile",

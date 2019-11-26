@@ -1,6 +1,7 @@
 {
 	"name": "Customer_Primus_VM",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Customer_TMP_VM",

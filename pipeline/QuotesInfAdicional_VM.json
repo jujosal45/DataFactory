@@ -1,6 +1,7 @@
 {
 	"name": "QuotesInfAdicional_VM",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_QuotesfileAdicional",

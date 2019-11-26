@@ -1,6 +1,7 @@
 {
 	"name": "Intiza_Tasks",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Intiza Tasks_TMP",

@@ -1,6 +1,7 @@
 {
 	"name": "InvoiceReportsCampos_VM",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Invoices_TMP",

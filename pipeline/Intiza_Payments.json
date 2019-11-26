@@ -1,6 +1,7 @@
 {
 	"name": "Intiza_Payments",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Payments_TMP",

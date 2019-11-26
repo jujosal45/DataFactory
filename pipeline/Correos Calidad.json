@@ -1,6 +1,7 @@
 {
 	"name": "Correos Calidad",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Invoices_TMP",

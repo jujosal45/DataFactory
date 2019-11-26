@@ -1,6 +1,7 @@
 {
 	"name": "Intiza_Debt",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Debt Tasks_TMP",

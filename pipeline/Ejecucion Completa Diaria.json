@@ -1,6 +1,7 @@
 {
 	"name": "Ejecucion Completa Diaria",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Customer Primus",

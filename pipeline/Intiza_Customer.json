@@ -1,6 +1,7 @@
 {
 	"name": "Intiza_Customer",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Intiza Customer_TMP",

@@ -1,6 +1,7 @@
 {
 	"name": "ShipmentReports",
 	"properties": {
+		"description": "vm",
 		"activities": [
 			{
 				"name": "Copy_Shipment_TMP",
