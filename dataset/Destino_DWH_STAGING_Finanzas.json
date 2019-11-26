@@ -1,0 +1,182 @@
+{
+	"name": "Destino_DWH_STAGING_Finanzas",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destino_Staging_DWH",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Origen",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Tipo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Project",
+				"type": "nvarchar"
+			},
+			{
+				"name": "docentry",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ItemCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dscription",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Quantity",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "LineNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LineTotal",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "DocDateEncabezado",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "actdeldate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ocrcode2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "basecard",
+				"type": "nvarchar"
+			},
+			{
+				"name": "invntsttus",
+				"type": "char"
+			},
+			{
+				"name": "acctcode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "taxstatus",
+				"type": "char"
+			},
+			{
+				"name": "currency",
+				"type": "nvarchar"
+			},
+			{
+				"name": "targettype",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "linestatus",
+				"type": "char"
+			},
+			{
+				"name": "CardName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Comments",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JrnlMemo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DocDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DocDueDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "NombreMaestro",
+				"type": "nvarchar"
+			},
+			{
+				"name": "idDate",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "idbol",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "idItemfacturacion",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdCustomer",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdVendor",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdmodeGroup",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "idcarrier",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NumAtCard",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Doctype",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[Staging].[Finanzas_SAP]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

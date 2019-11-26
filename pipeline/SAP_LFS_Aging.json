@@ -1,0 +1,279 @@
+{
+	"name": "SAP_LFS_Aging",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copiar_Aging_LFS",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"preCopyScript": "truncate table Sap.Aging"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ShortName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ShortName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ContraAct",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ContraAct",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TransId",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "TransId",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Ref2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Ref2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CardCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CardCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CardName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CardName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BaseRef",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BaseRef",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Currency",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Currency",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Invoice No.",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Invoice No.",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MthDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "MthDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Invoice Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Invoice Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Due Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Due Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Balance Due",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "Balance Due",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Future",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "Future",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Current",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "Current",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "31-60 Days",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "31-60 Days",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "61-90 Days",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "61-90 Days",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "91-120 Days",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "91-120 Days",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "121+ Days",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "121+ Days",
+									"type": "Decimal"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Fuente_LFS_SAP_Aging",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Destino_DWH_Staging_Finanzas_Aging_VM",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "LLenado Modelo",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copiar_Aging_LFS",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "Sp_Insert_Update_HechoAging_Sap"
+				},
+				"linkedServiceName": {
+					"referenceName": "SQLServerVM_FUENTE",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

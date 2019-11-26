@@ -1,0 +1,19 @@
+{
+	"name": "Fuente_LFS_SAP_FacturaDeudor",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAP_LFS",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "[dbo].[V_DWH_facturaDeudor]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

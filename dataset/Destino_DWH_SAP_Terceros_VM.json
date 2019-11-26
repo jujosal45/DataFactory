@@ -1,0 +1,1551 @@
+{
+	"name": "Destino_DWH_SAP_Terceros_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLServerVM_DESTINO",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "CardCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardType",
+				"type": "char"
+			},
+			{
+				"name": "GroupCode",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "CmpPrivate",
+				"type": "char"
+			},
+			{
+				"name": "Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZipCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MailAddres",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MailZipCod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Phone2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Fax",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CntctPrsn",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Notes",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Balance",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "ChecksBal",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "DNotesBal",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "OrdersBal",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "GroupNum",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "CreditLine",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "DebtLine",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "Discount",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "VatStatus",
+				"type": "char"
+			},
+			{
+				"name": "LicTradNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DdctStatus",
+				"type": "char"
+			},
+			{
+				"name": "DdctPrcnt",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "ValidUntil",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Chrctrstcs",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ExMatchNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "InMatchNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ListNum",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "DNoteBalFC",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "OrderBalFC",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "DNoteBalSy",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "OrderBalSy",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "Transfered",
+				"type": "char"
+			},
+			{
+				"name": "BalTrnsfrd",
+				"type": "char"
+			},
+			{
+				"name": "IntrstRate",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "Commission",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "CommGrCode",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Free_Text",
+				"type": "ntext"
+			},
+			{
+				"name": "SlpCode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PrevYearAc",
+				"type": "char"
+			},
+			{
+				"name": "Currency",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RateDifAct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BalanceSys",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "BalanceFC",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "Protected",
+				"type": "char"
+			},
+			{
+				"name": "Cellular",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AvrageLate",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "County",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MailCity",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MailCounty",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MailCountr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "E_Mail",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Picture",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DflAccount",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DflBranch",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BankCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AddID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Pager",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FatherCard",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardFName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FatherType",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup1",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup2",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup3",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup4",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup5",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup6",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup7",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup8",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup9",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup10",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup11",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup12",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup13",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup14",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup15",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup16",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup17",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup18",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup19",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup20",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup21",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup22",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup23",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup24",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup25",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup26",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup27",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup28",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup29",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup30",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup31",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup32",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup33",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup34",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup35",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup36",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup37",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup38",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup39",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup40",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup41",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup42",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup43",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup44",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup45",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup46",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup47",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup48",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup49",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup50",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup51",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup52",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup53",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup54",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup55",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup56",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup57",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup58",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup59",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup60",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup61",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup62",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup63",
+				"type": "char"
+			},
+			{
+				"name": "QryGroup64",
+				"type": "char"
+			},
+			{
+				"name": "DdctOffice",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CreateDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UpdateDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ExportCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DscntObjct",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "DscntRel",
+				"type": "char"
+			},
+			{
+				"name": "SPGCounter",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "SPPCounter",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DdctFileNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SCNCounter",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "MinIntrst",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "DataSource",
+				"type": "char"
+			},
+			{
+				"name": "OprCount",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ExemptNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Priority",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CreditCard",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "CrCardNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardValid",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UserSign",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "LocMth",
+				"type": "char"
+			},
+			{
+				"name": "validFor",
+				"type": "char"
+			},
+			{
+				"name": "validFrom",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "validTo",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "frozenFor",
+				"type": "char"
+			},
+			{
+				"name": "frozenFrom",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "frozenTo",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "sEmployed",
+				"type": "char"
+			},
+			{
+				"name": "MTHCounter",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "BNKCounter",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DdgKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DdtKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ValidComm",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FrozenComm",
+				"type": "nvarchar"
+			},
+			{
+				"name": "chainStore",
+				"type": "char"
+			},
+			{
+				"name": "DiscInRet",
+				"type": "char"
+			},
+			{
+				"name": "State1",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VatGroup",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LogInstanc",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ObjType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Indicator",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ShipType",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "DebPayAcct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ShipToDef",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Block",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MailBlock",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Password",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ECVatGroup",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Deleted",
+				"type": "char"
+			},
+			{
+				"name": "IBAN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DocEntry",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FormCode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Box1099",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PymCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BackOrder",
+				"type": "char"
+			},
+			{
+				"name": "PartDelivr",
+				"type": "char"
+			},
+			{
+				"name": "DunnLevel",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DunnDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "BlockDunn",
+				"type": "char"
+			},
+			{
+				"name": "BankCountr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CollecAuth",
+				"type": "char"
+			},
+			{
+				"name": "DME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "InstrucKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SinglePaym",
+				"type": "char"
+			},
+			{
+				"name": "ISRBillId",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PaymBlock",
+				"type": "char"
+			},
+			{
+				"name": "RefDetails",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HouseBank",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OwnerIdNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PyBlckDesc",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HousBnkCry",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HousBnkAct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HousBnkBrn",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ProjectCod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SysMatchNo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "VatIdUnCmp",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AgentCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TolrncDays",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "SelfInvoic",
+				"type": "char"
+			},
+			{
+				"name": "DeferrTax",
+				"type": "char"
+			},
+			{
+				"name": "LetterNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MaxAmount",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "FromDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ToDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "WTLiable",
+				"type": "char"
+			},
+			{
+				"name": "CrtfcateNO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ExpireDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "NINum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AccCritria",
+				"type": "char"
+			},
+			{
+				"name": "WTCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Equ",
+				"type": "char"
+			},
+			{
+				"name": "HldCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ConnBP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MltMthNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TypWTReprt",
+				"type": "char"
+			},
+			{
+				"name": "VATRegNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RepName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Industry",
+				"type": "ntext"
+			},
+			{
+				"name": "Business",
+				"type": "ntext"
+			},
+			{
+				"name": "WTTaxCat",
+				"type": "ntext"
+			},
+			{
+				"name": "IsDomestic",
+				"type": "char"
+			},
+			{
+				"name": "IsResident",
+				"type": "char"
+			},
+			{
+				"name": "AutoCalBCG",
+				"type": "char"
+			},
+			{
+				"name": "OtrCtlAcct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AliasName",
+				"type": "ntext"
+			},
+			{
+				"name": "Building",
+				"type": "ntext"
+			},
+			{
+				"name": "MailBuildi",
+				"type": "ntext"
+			},
+			{
+				"name": "BoEPrsnt",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BoEDiscnt",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BoEOnClct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UnpaidBoE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITWTCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DunTerm",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ChannlBP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DfTcnician",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Territory",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "BillToDef",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DpmClear",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IntrntSite",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LangCode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HousActKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Profession",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CDPNum",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "DflBankKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "BCACode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UseShpdGd",
+				"type": "char"
+			},
+			{
+				"name": "RegNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VerifNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BankCtlKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HousCtlKey",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AddrType",
+				"type": "nvarchar"
+			},
+			{
+				"name": "InsurOp347",
+				"type": "char"
+			},
+			{
+				"name": "MailAddrTy",
+				"type": "nvarchar"
+			},
+			{
+				"name": "StreetNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MailStrNo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TaxRndRule",
+				"type": "char"
+			},
+			{
+				"name": "VendTID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ThreshOver",
+				"type": "char"
+			},
+			{
+				"name": "SurOver",
+				"type": "char"
+			},
+			{
+				"name": "VendorOcup",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OpCode347",
+				"type": "char"
+			},
+			{
+				"name": "DpmIntAct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ResidenNum",
+				"type": "char"
+			},
+			{
+				"name": "UserSign2",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "PlngGroup",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VatIDNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Affiliate",
+				"type": "char"
+			},
+			{
+				"name": "MivzExpSts",
+				"type": "char"
+			},
+			{
+				"name": "HierchDdct",
+				"type": "char"
+			},
+			{
+				"name": "CertWHT",
+				"type": "char"
+			},
+			{
+				"name": "CertBKeep",
+				"type": "char"
+			},
+			{
+				"name": "WHShaamGrp",
+				"type": "char"
+			},
+			{
+				"name": "IndustryC",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DatevAcct",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DatevFirst",
+				"type": "char"
+			},
+			{
+				"name": "GTSRegNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GTSBankAct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GTSBilAddr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HsBnkSwift",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HsBnkIBAN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DflSwift",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AutoPost",
+				"type": "char"
+			},
+			{
+				"name": "IntrAcc",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FeeAcc",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CpnNo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NTSWebSite",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "DflIBAN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Series",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Number",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EDocExpFrm",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TaxIdIdent",
+				"type": "char"
+			},
+			{
+				"name": "Attachment",
+				"type": "ntext"
+			},
+			{
+				"name": "AtcEntry",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DiscRel",
+				"type": "char"
+			},
+			{
+				"name": "NoDiscount",
+				"type": "char"
+			},
+			{
+				"name": "SCAdjust",
+				"type": "char"
+			},
+			{
+				"name": "DflAgrmnt",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GlblLocNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SenderID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RcpntID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MainUsage",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SefazCheck",
+				"type": "char"
+			},
+			{
+				"name": "free312",
+				"type": "char"
+			},
+			{
+				"name": "free313",
+				"type": "char"
+			},
+			{
+				"name": "DateFrom",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DateTill",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "RelCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OKATO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "OKTMO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KBKCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TypeOfOp",
+				"type": "char"
+			},
+			{
+				"name": "OwnerCode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MandateID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SignDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Remark1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ConCerti",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TpCusPres",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RoleTypCod",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BlockComm",
+				"type": "char"
+			},
+			{
+				"name": "EmplymntCt",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ExcptnlEvt",
+				"type": "char"
+			},
+			{
+				"name": "ExpnPrfFnd",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "EdrsFromBP",
+				"type": "char"
+			},
+			{
+				"name": "EdrsToBP",
+				"type": "char"
+			},
+			{
+				"name": "CreateTS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "UpdateTS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EDocGenTyp",
+				"type": "char"
+			},
+			{
+				"name": "eStreet",
+				"type": "nvarchar"
+			},
+			{
+				"name": "eStreetNum",
+				"type": "nvarchar"
+			},
+			{
+				"name": "eBuildnNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "eZipCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "eCityTown",
+				"type": "nvarchar"
+			},
+			{
+				"name": "eCountry",
+				"type": "nvarchar"
+			},
+			{
+				"name": "eDistrict",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RepFName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RepSName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RepCmpName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RepFisCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RepAddID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PECAddr",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IPACodePA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MerchantID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "Staging",
+			"table": "SAP_Terceros"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

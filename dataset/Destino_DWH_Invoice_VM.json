@@ -1,0 +1,223 @@
+{
+	"name": "Destino_DWH_Invoice_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLServerVM_DESTINO",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Invoice#",
+				"type": "varchar"
+			},
+			{
+				"name": "InvoiceDate",
+				"type": "date"
+			},
+			{
+				"name": "DueDate",
+				"type": "varchar"
+			},
+			{
+				"name": "Aging",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL#",
+				"type": "varchar"
+			},
+			{
+				"name": "BOLDate",
+				"type": "varchar"
+			},
+			{
+				"name": "Mode",
+				"type": "varchar"
+			},
+			{
+				"name": "CustomerCode",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer",
+				"type": "varchar"
+			},
+			{
+				"name": "CarrierName",
+				"type": "varchar"
+			},
+			{
+				"name": "PRO#",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipperCity",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipperCountry",
+				"type": "varchar"
+			},
+			{
+				"name": "ConsigneeCity",
+				"type": "varchar"
+			},
+			{
+				"name": "ConsigneeCountry",
+				"type": "varchar"
+			},
+			{
+				"name": "Office",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipperRef#",
+				"type": "varchar"
+			},
+			{
+				"name": "ConsigneeRef#",
+				"type": "varchar"
+			},
+			{
+				"name": "ThirdPartyRef",
+				"type": "varchar"
+			},
+			{
+				"name": "EstCost",
+				"type": "varchar"
+			},
+			{
+				"name": "ActCost",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 4
+			},
+			{
+				"name": "Invoice",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 4
+			},
+			{
+				"name": "Paid",
+				"type": "varchar"
+			},
+			{
+				"name": "EstCost2",
+				"type": "varchar"
+			},
+			{
+				"name": "ActCost2",
+				"type": "varchar"
+			},
+			{
+				"name": "CostClosed",
+				"type": "varchar"
+			},
+			{
+				"name": "Ready",
+				"type": "varchar"
+			},
+			{
+				"name": "Sent",
+				"type": "varchar"
+			},
+			{
+				"name": "VendorCode",
+				"type": "varchar"
+			},
+			{
+				"name": "VendorName",
+				"type": "varchar"
+			},
+			{
+				"name": "InvoiceRemarks",
+				"type": "varchar"
+			},
+			{
+				"name": "InvoiceRemarksInternal",
+				"type": "varchar"
+			},
+			{
+				"name": "Idtiempo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdBol",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdCarrier",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdCostumer",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdMode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdVendor",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdModeGroup",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdSeller",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Removed",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Shipper id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Vendor id",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IdSalesRep",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SalesPeople_Hist",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IdInsideSalesHist",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "Staging",
+			"table": "Invoices"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

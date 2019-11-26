@@ -1,0 +1,366 @@
+{
+	"name": "SAP_ECU_Factura",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copiar_Factura_ECU",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table Staging.Finanzas_SAP"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Origen",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Origen",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Tipo",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Tipo",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Project",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Project",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DocEntry",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "docentry",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ItemCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ItemCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Dscription",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Dscription",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Quantity",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "Quantity",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "LineNum",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "LineNum",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "LineTotal",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "LineTotal",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DocDateEncabezado",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DocDateEncabezado",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "ActDelDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "actdeldate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "OcrCode2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ocrcode2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BaseCard",
+									"type": "String"
+								},
+								"sink": {
+									"name": "basecard",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "InvntSttus",
+									"type": "String"
+								},
+								"sink": {
+									"name": "invntsttus",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AcctCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "acctcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TaxStatus",
+									"type": "String"
+								},
+								"sink": {
+									"name": "taxstatus",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Currency",
+									"type": "String"
+								},
+								"sink": {
+									"name": "currency",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TargetType",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "targettype",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "LineStatus",
+									"type": "String"
+								},
+								"sink": {
+									"name": "linestatus",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CardName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CardName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Comments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Comments",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CardCode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CardCode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "JrnlMemo",
+									"type": "String"
+								},
+								"sink": {
+									"name": "JrnlMemo",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DocDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DocDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "DocDueDate",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "DocDueDate",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "NombreMaestro",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NombreMaestro",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Fuente_ECU_SAP_Factura",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Destino_DWH_STAGING_Finanzas",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Tranformar facturas Sap",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copiar_Factura_ECU",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[Staging].[Sp_Tranformaciones_Finanzas_Sap]"
+				},
+				"linkedServiceName": {
+					"referenceName": "Destino_Staging_DWH",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Cargar Facturas sap",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Tranformar facturas Sap",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[Staging].[sp_Load_FacturacionSap]"
+				},
+				"linkedServiceName": {
+					"referenceName": "Destino_Staging_DWH",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

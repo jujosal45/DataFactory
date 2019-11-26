@@ -1,0 +1,20 @@
+{
+	"name": "Fuente_ECU_SAP_Factura",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAP_ECU",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "V_DWH_Facturacion_SAP_Consolidado"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

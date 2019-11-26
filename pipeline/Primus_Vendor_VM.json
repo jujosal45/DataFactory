@@ -1,0 +1,619 @@
+{
+	"name": "Primus_Vendor_VM",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copiar_Vendors_LFS_Primus",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"preCopyScript": "truncate table staging.vendors_primus"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Active",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Active",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Phone",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Phone",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fax",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fax",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Contact",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Email",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Email",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Motor Carrier#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Motor Carrier#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Use API",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Use API",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Carrier",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Carrier",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Account",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Account",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Username",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Username",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Password",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Password",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Access Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Access Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Extra Field",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Extra Field",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Private",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Private",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Quote Notes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quote Notes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Show Quote Notes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Show Quote Notes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BOL Notes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BOL Notes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Show BOL Notes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Show BOL Notes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Term",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Term",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Filter Origin Zipcodes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Filter Origin Zipcodes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Filter Dest. Zipcodes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Filter Dest. Zipcodes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Equipments",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Equipments",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Service Area",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Service Area",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Max. Pieces",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Max. Pieces",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Max. Weight per Piece",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Max. Weight per Piece",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Max. Weight",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Max. Weight",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Max. CFT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Max. CFT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Max. Length",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Max. Length",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Max. Width",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Max. Width",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Max. Height",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Max. Height",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To Account",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To Account",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To Address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To Address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To Zipcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To Zipcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To City",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To City",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To State",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To State",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To Country",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To Country",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To Phone",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To Phone",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill To Fax",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill To Fax",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header Logo",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header Logo",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header Address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header Address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header Zipcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header Zipcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header City",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header City",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header State",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header State",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header Country",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header Country",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header Phone",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header Phone",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PDF Header Fax",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PDF Header Fax",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Created",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Created",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Vendor Id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Vendor Id",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Fuente_DL_Vendor_VM",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Destino_DWH_Staging_Vendor_VM",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "sp_Load_Vendor_Completo",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copiar_Vendors_LFS_Primus",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[Staging].[sp_Load_Carrier_Completo]"
+				},
+				"linkedServiceName": {
+					"referenceName": "SQLServerVM_DESTINO",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

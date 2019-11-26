@@ -1,0 +1,409 @@
+{
+	"name": "Primus_Customer_VM",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copiar_Terceros_LFS_Primus",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "SqlServerSink",
+						"preCopyScript": "truncate table staging.Customers_Primus"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Address1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Address1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Address2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Address2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Phone",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Phone",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fax",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fax",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Email",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Email",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "City",
+									"type": "String"
+								},
+								"sink": {
+									"name": "City",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "State",
+									"type": "String"
+								},
+								"sink": {
+									"name": "State",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Zipcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Zipcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Contact",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Contact",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Phone2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Phone2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Open Time",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Open Time",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Close Time",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Close Time",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AR Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AR Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Office Assigned",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Office Assigned",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipping Location",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Shipping Location",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Rating Applet",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Rating Applet",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Remit To SL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Remit To SL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Billing Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Billing Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Credit Limit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Credit Limit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Credit Status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Credit Status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Terms",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Terms",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Profile",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Profile",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Locked",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Locked",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Sales Rep.",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Sales Rep.",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Contacts",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Contacts",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Active",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Active",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Created",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Created",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Remarks",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Remarks",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer Id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer Id",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Fuente_DL_Customer_VM",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Destino_DWH_STAGING_Customer_VM",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "sp_Load_Customer_Completo",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copiar_Terceros_LFS_Primus",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[Staging].[sp_Load_Customer_Completo]"
+				},
+				"linkedServiceName": {
+					"referenceName": "SQLServerVM_DESTINO",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

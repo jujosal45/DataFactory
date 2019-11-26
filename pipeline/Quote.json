@@ -1,0 +1,428 @@
+{
+	"name": "Quote",
+	"properties": {
+		"activities": [
+			{
+				"name": "Extaccion_Quote_DL_DWH",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Extraccion_Quotes_DL",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table staging.Quotes_Filtrados"
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": true,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Quote#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quote#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Origin",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Origin",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "State",
+									"type": "String"
+								},
+								"sink": {
+									"name": "State",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Zipcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Zipcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Destination",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Destination",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "State1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "State1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Zipcode1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Zipcode1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Distance",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Distance",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Vendor",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Vendor",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Carrier",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Carrier",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Service Level",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Service Level",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Transit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Transit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Pieces",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Pieces",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Weight",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Weight",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Class",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Class",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Total",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Total",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Quote#1",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quote#1",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "From Applet",
+									"type": "String"
+								},
+								"sink": {
+									"name": "From Applet",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Insurance",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Insurance",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "booked",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Booked",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BOL#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BOL#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Last Update",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Last Update",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Time",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Time",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "llave",
+									"type": "String"
+								},
+								"sink": {
+									"name": "llave",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "dif",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "dif",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "customer id"
+								},
+								"sink": {
+									"name": "customer id"
+								}
+							},
+							{
+								"source": {
+									"name": "vendor id"
+								},
+								"sink": {
+									"name": "vendor id"
+								}
+							},
+							{
+								"source": {
+									"name": "sell"
+								},
+								"sink": {
+									"name": "sell"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Fuente_DL_Quote",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Destino_DWH_Quotes",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Extraccion_Quotes_DL",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "dbo.Sp_Extraer_Quotes"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Transformar_quotes",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Extaccion_Quote_DL_DWH",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "staging.Sp_Tranformaciones_QuotesFiltrados"
+				},
+				"linkedServiceName": {
+					"referenceName": "Destino_Staging_DWH",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Carga_Quotes",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Transformar_quotes",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "staging.Sp_Load_Quotes"
+				},
+				"linkedServiceName": {
+					"referenceName": "Destino_Staging_DWH",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

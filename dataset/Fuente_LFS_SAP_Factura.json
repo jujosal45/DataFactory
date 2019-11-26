@@ -1,0 +1,147 @@
+{
+	"name": "Fuente_LFS_SAP_Factura",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SAP_LFS",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Origen",
+				"type": "varchar"
+			},
+			{
+				"name": "Tipo",
+				"type": "varchar"
+			},
+			{
+				"name": "Project",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DocEntry",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ItemCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Dscription",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Quantity",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "LineNum",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LineTotal",
+				"type": "decimal",
+				"precision": 19,
+				"scale": 6
+			},
+			{
+				"name": "DocDateEncabezado",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ActDelDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "OcrCode2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BaseCard",
+				"type": "nvarchar"
+			},
+			{
+				"name": "InvntSttus",
+				"type": "char"
+			},
+			{
+				"name": "AcctCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TaxStatus",
+				"type": "char"
+			},
+			{
+				"name": "Currency",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TargetType",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LineStatus",
+				"type": "char"
+			},
+			{
+				"name": "CardName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Comments",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JrnlMemo",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DocDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DocDueDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "NombreMaestro",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NumAtCard",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DocType",
+				"type": "char"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[V_DWH_Facturacion_SAP_Consolidado]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

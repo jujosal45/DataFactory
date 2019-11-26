@@ -1,0 +1,194 @@
+{
+	"name": "Destino_DWH_Quotes",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destino_Staging_DWH",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Quote#",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer Quote#",
+				"type": "varchar"
+			},
+			{
+				"name": "Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Origin",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "Destination",
+				"type": "varchar"
+			},
+			{
+				"name": "State1",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode1",
+				"type": "varchar"
+			},
+			{
+				"name": "Distance",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor",
+				"type": "varchar"
+			},
+			{
+				"name": "Carrier",
+				"type": "varchar"
+			},
+			{
+				"name": "Service Level",
+				"type": "varchar"
+			},
+			{
+				"name": "Transit",
+				"type": "varchar"
+			},
+			{
+				"name": "Pieces",
+				"type": "varchar"
+			},
+			{
+				"name": "Weight",
+				"type": "varchar"
+			},
+			{
+				"name": "Class",
+				"type": "varchar"
+			},
+			{
+				"name": "Total",
+				"type": "varchar"
+			},
+			{
+				"name": "Quote#1",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer",
+				"type": "varchar"
+			},
+			{
+				"name": "From Applet",
+				"type": "varchar"
+			},
+			{
+				"name": "Insurance",
+				"type": "varchar"
+			},
+			{
+				"name": "Booked",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL#",
+				"type": "varchar"
+			},
+			{
+				"name": "Last Update",
+				"type": "varchar"
+			},
+			{
+				"name": "Date1",
+				"type": "varchar"
+			},
+			{
+				"name": "Time",
+				"type": "varchar"
+			},
+			{
+				"name": "Idtiempo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdCostume",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdCarrier",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdZipcodeOrigen",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdZipcodeDestino",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdVendor",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdLane",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "llave",
+				"type": "varchar"
+			},
+			{
+				"name": "IdBol",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdService",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "dif",
+				"type": "nvarchar"
+			},
+			{
+				"name": "IdModeGroup",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "customer id",
+				"type": "varchar"
+			},
+			{
+				"name": "vendor id",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[Staging].[Quotes_Filtrados]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,884 @@
+{
+	"name": "Shipment",
+	"properties": {
+		"activities": [
+			{
+				"name": "Extaccion_Shipments_DL_DWH",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"preCopyScript": "truncate table staging.shipments"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "BOL#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BOL#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Mode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Mode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Controlled by",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Controlled by",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SalesPeople",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SalesPeople",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipper",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Shipper",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "City",
+									"type": "String"
+								},
+								"sink": {
+									"name": "City",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "State",
+									"type": "String"
+								},
+								"sink": {
+									"name": "State",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Zipcode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Zipcode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Email",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Email",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipper Ref#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Shipper Ref#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Consignee",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Consignee",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Address2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Address2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "City2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "City2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "State2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "State2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Zipcode2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Zipcode2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Lanes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Lanes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Distance",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Distance",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Email2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Email2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Consignee Ref#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Consignee Ref#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Address3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Address3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "City3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "City3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "State3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "State3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Zipcode3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Zipcode3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Email3",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Email3",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer Ref#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer Ref#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Total Weight",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Total Weight",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Unit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Unit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Class",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Class",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Pieces",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Pieces",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hazmat",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Hazmat",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Commodities",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Commodities",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CFT",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CFT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Density",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Density",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Estimated PU Date",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "Estimated PU Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_Number",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_Number",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Month",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Weeknum",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Weeknum",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Confirmed PU Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Confirmed PU Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Due Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Due Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Confirmed DLV Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Confirmed DLV Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Days Overdue",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Days Overdue",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Current Status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Current Status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Vendor",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Vendor",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Carrier",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Carrier",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Service",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Service",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Transit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Transit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Carrier SCAC",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Carrier SCAC",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Pickup#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Pickup#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PRO#",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PRO#",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Accessorials",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Accessorials",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Insurance",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Insurance",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Booking Est. Cost",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Booking Est. Cost",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Booking Act. Costs",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Booking Act. Costs",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Invoice Costs",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Invoice Costs",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BillTo Amount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BillTo Amount",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Profit USD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Profit USD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Profit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Profit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GP",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GP",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Last Update",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Last Update",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Date2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Date2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Time",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Time",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BOL Deleted",
+									"type": "String"
+								},
+								"sink": {
+									"name": "BOL Deleted",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Notes",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Notes",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Notes -Internal-",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Notes -Internal-",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer Id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer Id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Shipper Id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Shipper Id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Vendor Id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Vendor Id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PiecesDetail",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PiecesDetail",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Creator User",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Creator User",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "salespeople_hist"
+								},
+								"sink": {
+									"name": "salespeople_hist"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Fuente_DL_shipment",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Destino_DWH_shipment",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Transformar_shipment",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Extaccion_Shipments_DL_DWH",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[Staging].[Sp_Tranformaciones_Shipments]"
+				},
+				"linkedServiceName": {
+					"referenceName": "Destino_Staging_DWH",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Carga DWH",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Transformar_shipment",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[Staging].sp_Load_Shipments"
+				},
+				"linkedServiceName": {
+					"referenceName": "Destino_Staging_DWH",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

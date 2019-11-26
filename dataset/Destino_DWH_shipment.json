@@ -1,0 +1,388 @@
+{
+	"name": "Destino_DWH_shipment",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Destino_Staging_DWH",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "BOL#",
+				"type": "varchar"
+			},
+			{
+				"name": "Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Mode",
+				"type": "varchar"
+			},
+			{
+				"name": "Controlled by",
+				"type": "varchar"
+			},
+			{
+				"name": "SalesPeople",
+				"type": "varchar"
+			},
+			{
+				"name": "Shipper",
+				"type": "varchar"
+			},
+			{
+				"name": "Address",
+				"type": "varchar"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "Email",
+				"type": "varchar"
+			},
+			{
+				"name": "Shipper Ref#",
+				"type": "varchar"
+			},
+			{
+				"name": "Consignee",
+				"type": "varchar"
+			},
+			{
+				"name": "Address2",
+				"type": "varchar"
+			},
+			{
+				"name": "City2",
+				"type": "varchar"
+			},
+			{
+				"name": "State2",
+				"type": "varchar"
+			},
+			{
+				"name": "Country2",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode2",
+				"type": "varchar"
+			},
+			{
+				"name": "Lanes",
+				"type": "varchar"
+			},
+			{
+				"name": "Distance",
+				"type": "varchar"
+			},
+			{
+				"name": "Email2",
+				"type": "varchar"
+			},
+			{
+				"name": "Consignee Ref#",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Address3",
+				"type": "varchar"
+			},
+			{
+				"name": "City3",
+				"type": "varchar"
+			},
+			{
+				"name": "State3",
+				"type": "varchar"
+			},
+			{
+				"name": "Country3",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode3",
+				"type": "varchar"
+			},
+			{
+				"name": "Email3",
+				"type": "text"
+			},
+			{
+				"name": "Customer Ref#",
+				"type": "varchar"
+			},
+			{
+				"name": "Total Weight",
+				"type": "varchar"
+			},
+			{
+				"name": "Unit",
+				"type": "varchar"
+			},
+			{
+				"name": "Class",
+				"type": "varchar"
+			},
+			{
+				"name": "Pieces",
+				"type": "varchar"
+			},
+			{
+				"name": "Hazmat",
+				"type": "varchar"
+			},
+			{
+				"name": "Commodities",
+				"type": "text"
+			},
+			{
+				"name": "CFT",
+				"type": "varchar"
+			},
+			{
+				"name": "Density",
+				"type": "varchar"
+			},
+			{
+				"name": "Estimated PU Date",
+				"type": "date"
+			},
+			{
+				"name": "Month_Number",
+				"type": "varchar"
+			},
+			{
+				"name": "Month",
+				"type": "varchar"
+			},
+			{
+				"name": "Year",
+				"type": "varchar"
+			},
+			{
+				"name": "Weeknum",
+				"type": "varchar"
+			},
+			{
+				"name": "Confirmed PU Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Due Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Confirmed DLV Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Days Overdue",
+				"type": "varchar"
+			},
+			{
+				"name": "Current Status",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor",
+				"type": "varchar"
+			},
+			{
+				"name": "Carrier",
+				"type": "varchar"
+			},
+			{
+				"name": "Service",
+				"type": "varchar"
+			},
+			{
+				"name": "Transit",
+				"type": "varchar"
+			},
+			{
+				"name": "Carrier SCAC",
+				"type": "varchar"
+			},
+			{
+				"name": "Pickup#",
+				"type": "varchar"
+			},
+			{
+				"name": "PRO#",
+				"type": "varchar"
+			},
+			{
+				"name": "Accessorials",
+				"type": "varchar"
+			},
+			{
+				"name": "Insurance",
+				"type": "varchar"
+			},
+			{
+				"name": "Booking Est. Cost",
+				"type": "varchar"
+			},
+			{
+				"name": "Booking Act. Costs",
+				"type": "varchar"
+			},
+			{
+				"name": "Invoice Costs",
+				"type": "varchar"
+			},
+			{
+				"name": "BillTo Amount",
+				"type": "varchar"
+			},
+			{
+				"name": "Profit USD",
+				"type": "varchar"
+			},
+			{
+				"name": "Profit",
+				"type": "varchar"
+			},
+			{
+				"name": "GP",
+				"type": "varchar"
+			},
+			{
+				"name": "Last Update",
+				"type": "varchar"
+			},
+			{
+				"name": "Date2",
+				"type": "varchar"
+			},
+			{
+				"name": "Time",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL Deleted",
+				"type": "varchar"
+			},
+			{
+				"name": "Notes",
+				"type": "text"
+			},
+			{
+				"name": "Notes -Internal-",
+				"type": "text"
+			},
+			{
+				"name": "Customer Id",
+				"type": "varchar"
+			},
+			{
+				"name": "Shipper Id",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor Id",
+				"type": "varchar"
+			},
+			{
+				"name": "PiecesDetail",
+				"type": "text"
+			},
+			{
+				"name": "Creator User",
+				"type": "varchar"
+			},
+			{
+				"name": "IdTiempo",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdBol",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdMode",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdCostumer",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdCarrier",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdZipCodeOrigen",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdZipCodeDestino",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdSeller",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdVendor",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdLane",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdModeGroup",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "IdService",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"tableName": "[Staging].[Shipments]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

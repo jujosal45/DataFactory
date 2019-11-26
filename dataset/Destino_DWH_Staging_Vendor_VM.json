@@ -1,0 +1,237 @@
+{
+	"name": "Destino_DWH_Staging_Vendor_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLServerVM_DESTINO",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Active",
+				"type": "varchar"
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Phone",
+				"type": "varchar"
+			},
+			{
+				"name": "Fax",
+				"type": "varchar"
+			},
+			{
+				"name": "Contact",
+				"type": "varchar"
+			},
+			{
+				"name": "Email",
+				"type": "varchar"
+			},
+			{
+				"name": "Motor Carrier#",
+				"type": "varchar"
+			},
+			{
+				"name": "Use API",
+				"type": "varchar"
+			},
+			{
+				"name": "Carrier",
+				"type": "varchar"
+			},
+			{
+				"name": "Account",
+				"type": "varchar"
+			},
+			{
+				"name": "Username",
+				"type": "varchar"
+			},
+			{
+				"name": "Password",
+				"type": "varchar"
+			},
+			{
+				"name": "Access Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Extra Field",
+				"type": "varchar"
+			},
+			{
+				"name": "Private",
+				"type": "varchar"
+			},
+			{
+				"name": "Quote Notes",
+				"type": "text"
+			},
+			{
+				"name": "Show Quote Notes",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL Notes",
+				"type": "text"
+			},
+			{
+				"name": "Show BOL Notes",
+				"type": "varchar"
+			},
+			{
+				"name": "Term",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To",
+				"type": "varchar"
+			},
+			{
+				"name": "Filter Origin Zipcodes",
+				"type": "text"
+			},
+			{
+				"name": "Filter Dest. Zipcodes",
+				"type": "text"
+			},
+			{
+				"name": "Type",
+				"type": "text"
+			},
+			{
+				"name": "Equipments",
+				"type": "text"
+			},
+			{
+				"name": "Service Area",
+				"type": "text"
+			},
+			{
+				"name": "Max. Pieces",
+				"type": "varchar"
+			},
+			{
+				"name": "Max. Weight per Piece",
+				"type": "varchar"
+			},
+			{
+				"name": "Max. Weight",
+				"type": "varchar"
+			},
+			{
+				"name": "Max. CFT",
+				"type": "varchar"
+			},
+			{
+				"name": "Max. Length",
+				"type": "varchar"
+			},
+			{
+				"name": "Max. Width",
+				"type": "varchar"
+			},
+			{
+				"name": "Max. Height",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To Account",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To Address",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To City",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To State",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To Phone",
+				"type": "varchar"
+			},
+			{
+				"name": "Bill To Fax",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header Name",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header Logo",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header Address",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header City",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header State",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header Country",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header Phone",
+				"type": "varchar"
+			},
+			{
+				"name": "PDF Header Fax",
+				"type": "varchar"
+			},
+			{
+				"name": "Created",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor Id",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "Staging",
+			"table": "Vendors_Primus"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

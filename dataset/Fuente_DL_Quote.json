@@ -1,0 +1,136 @@
+{
+	"name": "Fuente_DL_Quote",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Origin",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "Destination",
+				"type": "varchar"
+			},
+			{
+				"name": "State1",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode1",
+				"type": "varchar"
+			},
+			{
+				"name": "Distance",
+				"type": "varchar"
+			},
+			{
+				"name": "Vendor",
+				"type": "varchar"
+			},
+			{
+				"name": "Carrier",
+				"type": "varchar"
+			},
+			{
+				"name": "Service Level",
+				"type": "varchar"
+			},
+			{
+				"name": "Transit",
+				"type": "varchar"
+			},
+			{
+				"name": "Pieces",
+				"type": "varchar"
+			},
+			{
+				"name": "Weight",
+				"type": "varchar"
+			},
+			{
+				"name": "Class",
+				"type": "varchar"
+			},
+			{
+				"name": "Total",
+				"type": "varchar"
+			},
+			{
+				"name": "Quote#1",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer",
+				"type": "varchar"
+			},
+			{
+				"name": "From Applet",
+				"type": "varchar"
+			},
+			{
+				"name": "Insurance",
+				"type": "varchar"
+			},
+			{
+				"name": "booked",
+				"type": "varchar"
+			},
+			{
+				"name": "BOL#",
+				"type": "varchar"
+			},
+			{
+				"name": "Time",
+				"type": "varchar"
+			},
+			{
+				"name": "dif",
+				"type": "varchar"
+			},
+			{
+				"name": "llave",
+				"type": "varchar"
+			},
+			{
+				"name": "Last Update",
+				"type": "varchar"
+			},
+			{
+				"name": "Quote#",
+				"type": "varchar"
+			},
+			{
+				"name": "vendor id",
+				"type": "varchar"
+			},
+			{
+				"name": "customer id",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Consolidacion_quotes_50ultimo]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

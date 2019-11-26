@@ -1,0 +1,165 @@
+{
+	"name": "Ejecucion Completa_VM",
+	"properties": {
+		"activities": [
+			{
+				"name": "LFS_terceros_SAP",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "SAP_LFS_Terceros_VM",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Primus_LFS_Customer",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "LFS_terceros_SAP",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Primus_Customer_VM",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Primus_LFS_Vendor",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Primus_LFS_Customer",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Primus_Vendor_VM",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Shipment",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Primus_LFS_Vendor",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Shipment_VM",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Invoice",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Shipment",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Invoice_VM",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Quote",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Invoice",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Quote_VM",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "SAP_LFS_Factura",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Quote",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "SAP_LFS_Factura_VM",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "SAP_LFS_Aging_Sap",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "SAP_LFS_Factura",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "SAP_LFS_Aging",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,153 @@
+{
+	"name": "Destino_DWH_STAGING_Customer_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLServerVM_DESTINO",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Address1",
+				"type": "varchar"
+			},
+			{
+				"name": "Address2",
+				"type": "varchar"
+			},
+			{
+				"name": "Phone",
+				"type": "varchar"
+			},
+			{
+				"name": "Fax",
+				"type": "varchar"
+			},
+			{
+				"name": "Email",
+				"type": "text"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			},
+			{
+				"name": "State",
+				"type": "varchar"
+			},
+			{
+				"name": "Zipcode",
+				"type": "varchar"
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Contact",
+				"type": "varchar"
+			},
+			{
+				"name": "Phone2",
+				"type": "varchar"
+			},
+			{
+				"name": "Open Time",
+				"type": "varchar"
+			},
+			{
+				"name": "Close Time",
+				"type": "varchar"
+			},
+			{
+				"name": "AR Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Office Assigned",
+				"type": "varchar"
+			},
+			{
+				"name": "Shipping Location",
+				"type": "varchar"
+			},
+			{
+				"name": "Customer",
+				"type": "varchar"
+			},
+			{
+				"name": "Rating Applet",
+				"type": "varchar"
+			},
+			{
+				"name": "Remit To SL",
+				"type": "varchar"
+			},
+			{
+				"name": "Billing Code",
+				"type": "varchar"
+			},
+			{
+				"name": "Credit Limit",
+				"type": "varchar"
+			},
+			{
+				"name": "Credit Status",
+				"type": "varchar"
+			},
+			{
+				"name": "Terms",
+				"type": "varchar"
+			},
+			{
+				"name": "Profile",
+				"type": "varchar"
+			},
+			{
+				"name": "Locked",
+				"type": "varchar"
+			},
+			{
+				"name": "Sales Rep.",
+				"type": "varchar"
+			},
+			{
+				"name": "Contacts",
+				"type": "text"
+			},
+			{
+				"name": "Active",
+				"type": "varchar"
+			},
+			{
+				"name": "Created",
+				"type": "varchar"
+			},
+			{
+				"name": "Remarks",
+				"type": "text"
+			},
+			{
+				"name": "Customer Id",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "Staging",
+			"table": "Customers_Primus"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

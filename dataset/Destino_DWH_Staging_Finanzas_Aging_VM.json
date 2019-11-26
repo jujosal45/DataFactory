@@ -1,0 +1,118 @@
+{
+	"name": "Destino_DWH_Staging_Finanzas_Aging_VM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQLServerVM_FUENTE",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "VM"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ShortName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ContraAct",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TransId",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Ref2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardCode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CardName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BaseRef",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Currency",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Type",
+				"type": "varchar"
+			},
+			{
+				"name": "Invoice No.",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MthDate",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Invoice Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Due Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Balance Due",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Future",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "Current",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "31-60 Days",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "61-90 Days",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "91-120 Days",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			},
+			{
+				"name": "121+ Days",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "Sap",
+			"table": "Aging"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
