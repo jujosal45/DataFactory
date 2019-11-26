@@ -1,6 +1,7 @@
 {
 	"name": "LFS_blob_backup",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "bloblfs",
 			"type": "LinkedServiceReference"

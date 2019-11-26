@@ -1,6 +1,7 @@
 {
 	"name": "ShipmentReportsSYNC_prueba",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1",
 			"type": "LinkedServiceReference"

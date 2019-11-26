@@ -1,6 +1,7 @@
 {
 	"name": "Quotesfile",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "FtpServer1",
 			"type": "LinkedServiceReference"

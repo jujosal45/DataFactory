@@ -1,6 +1,7 @@
 {
 	"name": "SQL_Shipment_Reports_tmp2",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1",
 			"type": "LinkedServiceReference"

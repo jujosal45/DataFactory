@@ -1,6 +1,7 @@
 {
 	"name": "InvoiceReportSOURCE",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "FtpServer1",
 			"type": "LinkedServiceReference"

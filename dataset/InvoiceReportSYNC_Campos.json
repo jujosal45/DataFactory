@@ -1,6 +1,7 @@
 {
 	"name": "InvoiceReportSYNC_Campos",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1",
 			"type": "LinkedServiceReference"

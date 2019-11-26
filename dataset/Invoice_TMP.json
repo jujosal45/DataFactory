@@ -1,6 +1,7 @@
 {
 	"name": "Invoice_TMP",
 	"properties": {
+		"description": "vm",
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1",
 			"type": "LinkedServiceReference"
